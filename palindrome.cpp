@@ -27,9 +27,11 @@ int main() {
   for( int i = 0; i < length; i++) {
     strFinal[i] = str2[length - 1 - i];
   }
-  cout << "length " << strlen(str2) << endl;
-  cout << "str " << str << endl;
-  cout << "str2 " << str2 << endl;
-  cout << "strFinal " << strFinal << endl;
+  int length2 = strlen(strFinal);
+  for(int i = 0; i < length2; i++) {
+    if((strFinal[i] > 64 && strFinal[i] < 91) || (strFinal[i] > 96 && strFinal[i] < 123 )) {
+      cout << strFinal[i];
+    }
+  }
   return 0;
 }
