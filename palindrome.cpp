@@ -1,3 +1,6 @@
+/*Kyle Werstlein
+9/24/19
+Type a string up to 80 characters, find out if it's a plaindrome or not */
 #include <cstring>
 #include <iostream>
 
