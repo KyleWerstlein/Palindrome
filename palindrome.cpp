@@ -15,10 +15,18 @@ int main() {
   int length = strlen(str); // get string length
   int letterCount = 0;
   int nonLetterCount = 0;
+  char newChar = '_';
   for(int i = 0; i < length; i++) {  // walk through array
     if((str[i] > 64 && str[i] < 91) || (str[i] > 96 && str[i] < 123)) { // if str[i] is a letter
-      str2[letterCount] = str[i]; //copy to string to str array without non-letters
-      letterCount++; // count letters 
+      if(str[i] > 64 && str[i] < 91) { // make everything uppercase
+	newChar = str[i] + 32;
+	str2[letterCount] = newChar;
+	letterCount++;
+      }
+      else {
+	str2[letterCount] = str[i]; // copy string to str array without non-letters
+	letterCount++; // count letters
+      }
     }
     else {
       cout << str[i] << " is not a letter" << endl;
